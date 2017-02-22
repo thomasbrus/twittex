@@ -123,7 +123,6 @@ defmodule Twittex.API do
         token =
           token
           |> Map.fetch!(:access_token)
-          |> Poison.decode!()
           |> OAuth2.AccessToken.new()
         {:ok, token}
       {:error, error} ->

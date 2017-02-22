@@ -17,7 +17,7 @@ defmodule Twittex.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :poison, :httpoison, :poolboy, :gen_stage],
+    [applications: [:logger, :oauth2, :poison, :httpoison, :poolboy, :gen_stage],
      mod: {Twittex, []}]
   end
 
