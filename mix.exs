@@ -7,13 +7,13 @@ defmodule Twittex.Mixfile do
     [app: :twittex,
      name: "Twittex",
      version: @version,
-     elixir: "~> 1.3",
-     package: package,
-     description: description,
+     elixir: "~> 1.4",
+     package: package(),
+     description: description(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     docs: docs,
-     deps: deps]
+     docs: docs(),
+     deps: deps()]
   end
 
   def application do
@@ -40,11 +40,11 @@ defmodule Twittex.Mixfile do
   end
 
   defp deps do
-    [{:poison, "~> 3.0"},
-     {:httpoison, "~> 0.10"},
-     {:oauth2, "~> 0.8"},
+    [{:poison, "~> 3.1"},
+     {:httpoison, "~> 0.11"},
+     {:oauth2, "~> 0.9"},
+     {:gen_stage, "~> 0.11"},
      {:oauther, "~> 1.1"},
-     {:gen_stage, "~> 0.8"},
      {:poolboy, "~> 1.5"},
      {:ex_doc, "~> 0.14", only: :dev},
      {:earmark, ">= 0.0.0", only: :dev}]

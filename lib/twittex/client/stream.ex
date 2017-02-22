@@ -5,7 +5,7 @@ defmodule Twittex.Client.Stream do
   See `Twittex.Client.Base.stage/6` and `Twittex.Client.stream/2` for more details.
   """
 
-  alias Experimental.GenStage
+  alias GenStage
 
   use GenStage
 
